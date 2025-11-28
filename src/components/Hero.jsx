@@ -3,17 +3,14 @@ import { useRef } from 'react';
 
 const Hero = () => {
     const videoRef = useRef(null);
-    useEffect(()=>{
-        if(videoRef.current){
+    useEffect(()=>
+    {
+        if(videoRef.current)
+        {
             videoRef.current.playbackRate = 3;
         }
-    },[])
-    // const videoRef = useRef();
-    // useEffect(() => {
-    //    if(videoRef.current) 
-    //     {videoRef.current.playbackRate = 2;}
-    // }, [])
 
+    },[]     )
     
   return (
     <section id='hero'>
@@ -22,7 +19,8 @@ const Hero = () => {
     <img src="/title.png" alt="Mac Book Pro Title " />
 </div>
 <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
-
+<button>BUY NOW</button>
+<p>From  $1.5 to $0.09/month from apple .com</p>
     </section>
   )
 }

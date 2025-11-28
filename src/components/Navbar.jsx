@@ -1,9 +1,6 @@
 import React from 'react'
 import { navlinks } from '../constant'
 const Navbar = () => {
-    
-
-
     return (
         <header>
             <nav>
