@@ -1,37 +1,34 @@
 import React from 'react'
 import { navLinks } from '../constant'
+
 const Navbar = () => {
-    return (
-        <header>
-            <nav>
-                <img src="/logo.svg" alt="apple logo" />
 
-                <ul>
-                    {navLinks.map((linker)=>(
-                      <li key={linker.label}>
-                        <a href={linker.label}>
-                            {linker.label}
-                        </a>
+  return (
+    <header>
+      <nav>
+        <img src="/logo.svg" alt="Apple logo" />
 
+        <ul>
+          {navLinks.map((linker)=>(
+            <li key={linker.label}>
+              <a href={linker.label}>{linker.label}</a>
+            </li>
+          ))}
+        </ul>
 
-                      </li>
-                    ))}
+        <div className='flex-center gap-3'>
+          <button>
+            <img src="/search.svg" alt=" Search Img" />
+          </button>
 
-                    
-                
-                </ul>
-                <div className='flex-center gap-3'>
-                    <button>
-                        <img src="/search.svg" alt="search img" />
-                    </button>
-                    <button>
-                        <img src="/cart.svg" alt="Cart img"/>
-                    </button>
+          <button>
+            <img src="/cart.svg" alt="Cart Img" />
+          </button>
+        </div>
 
-                </div>
-            </nav>
-        </header>
-    )
+      </nav>
+    </header>
+  )
 }
 
 export default Navbar
